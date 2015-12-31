@@ -13,15 +13,9 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         Model::unguard();
-        $this->call('PostTableSeeder');
-    }
-}
 
-class PostTableSeeder extends Seeder
-{
-    public function run()
-    {
-        App\Post::truncate();
-        factory(App\Post::class, 20)->create();
+        // $this->call(UserTableSeeder::class);
+
+        Model::reguard();
     }
 }
