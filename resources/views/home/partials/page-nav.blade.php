@@ -19,7 +19,11 @@
             <li>
                 <a href="/">Home</a>
             </li>
-
+            @foreach ($tags as $tag)
+            <li>
+                <a href="/tag/{{ $tag }}">{{ $tag }}</a>
+            </li>
+            @endforeach
         </ul>
         <!-- <ul class="nav navbar-nav navbar-right">
             <li>

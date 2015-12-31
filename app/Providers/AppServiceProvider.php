@@ -13,7 +13,15 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $tags = Tag::lists('tag')->all();
+        view()->composer('index',view()->share('tags',$tags));
+
+        //后台菜单
+        $menus = Menu::where('parent_id','=',0)->orderBy('order','asc')->get();
+        foreach ($menus as &$value) {
+            $value['child_list'] = Menu::where('parent_id','=',$value['id'])->where('status','=',1)->orderBy('order','asc')->get();
+        }
+        view()->composer('admin',view()->share('menus',$menus));
     }
 
     /**
