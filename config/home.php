@@ -1,7 +1,7 @@
 <?php
 return [
-    'name' => "贱人俱乐部",
-    'title' => "贱人俱乐部",
+    'name' => "Canwonson",
+    'title' => "Canwonson",
     'subtitle' => 'The most valuable in the universe is time',
     'description' => 'The most valuable in the universe is time',
     'author' => 'canwonson',
