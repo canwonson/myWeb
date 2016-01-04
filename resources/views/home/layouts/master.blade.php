@@ -29,7 +29,7 @@
 @include('home.partials.page-footer')
 
 {{-- Scripts --}}
-<script src="/assets/js/home.js"></script>
+<script src="/assets/js/blog.js"></script>
 @yield('scripts')
 
 </body>

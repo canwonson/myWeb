@@ -45,8 +45,16 @@
     </label>
     <div class="col-md-3">
         <select name="status" class="form-control" id="status">
-            <option name="status" value="1">显示</option>
-            <option name="status" value="0">隐藏</option>
+            <option name="status" 
+            @if ($status == 1)
+                selected="selected"
+            @endif
+            value="1">显示</option>
+            <option name="status" 
+            @if ($status == 0)
+                selected="selected"
+            @endif
+            value="0">隐藏</option>
         </select>
     </div>
 </div>

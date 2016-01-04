@@ -4,7 +4,7 @@
 <div class="container-fluid">
     <div class="row page-title-row">
         <div class="col-md-12">
-            <h3><a href="/admin/menu">Menus</a> <small>» 新增菜单</small></h3>
+            <h3><a href="/admin/menu">Menus</a> <small>» 新增菜单</small><button class="btn btn-success" onclick="history.go(-1)">« Back</button></h3>
         </div>
     </div>
 

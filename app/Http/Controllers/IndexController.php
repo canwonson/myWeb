@@ -19,6 +19,13 @@ class IndexController extends Controller
         return view($layout, $data);
     }
 
+    public function showTag($tag, Request $request)
+    {
+        $data = $this->dispatch(new HomeIndexData($tag));
+        $layout = $tag ? Tag::layout($tag) : 'home.layouts.index';
+        return view($layout, $data);
+    }
+
     public function showPost($slug, Request $request)
     {
         $post = Post::with('tags')->whereSlug($slug)->firstOrFail();
